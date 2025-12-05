@@ -1,0 +1,21 @@
+{
+  "miniprogramRoot": "./dist",
+  "projectname": "TXwm",
+  "description": "童性未泯v2.0",
+  "appid": "wx44403cf2bb1a8df1",
+  "packOptions": {
+    "ignore": [
+      { "type": "glob", "value": "dist/assets/images/生成性教育 IP.gif" },
+      { "type": "glob", "value": "**/*.map" }
+    ]
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "enhance": false,
+    "compileHotReLoad": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
+}
