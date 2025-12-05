@@ -26,7 +26,7 @@ export default function Mine() {
   };
 
   return (
-    <View className="min-h-screen bg-stone-50 pb-24">
+    <View className="min-h-screen bg-stone-50 pb-48">
       {/* Header Section */}
       <View className="bg-emerald-800 pt-4 pb-16 px-4 rounded-b-[40px] relative shadow-lg shadow-emerald-900/20">
         <View className="flex items-center gap-4 mb-6">
@@ -165,13 +165,26 @@ export default function Mine() {
               { name: "我的订单", icon: "📦" },
               { name: "收货地址", icon: "📍" },
               { name: "南光通物流", icon: "🚛" },
-              { name: "联系客服", icon: "🎧" },
               { name: "营养报告", icon: "📊" },
               { name: "优惠券", icon: "🎫" },
               { name: "设置", icon: "⚙️" },
               { name: "关于我们", icon: "ℹ️" },
+              { name: "XRAK", icon: "👾", link: "/pages/xrak/index" },
             ].map((item, idx) => (
-              <View key={idx} className="flex flex-col items-center gap-2">
+              <View
+                key={idx}
+                className="flex flex-col items-center gap-2"
+                onClick={() => {
+                  if (item.link) {
+                    Taro.navigateTo({ url: item.link });
+                  } else {
+                    Taro.showToast({
+                      title: `点击了${item.name}`,
+                      icon: "none",
+                    });
+                  }
+                }}
+              >
                 <View className="w-10 h-10 bg-stone-50 rounded-full flex items-center justify-center text-xl">
                   {item.icon}
                 </View>

@@ -4,6 +4,7 @@ export default defineAppConfig({
     "pages/cart/index",
     "pages/mine/index",
     "pages/bud/index",
+    "pages/xrak/index",
   ],
   window: {
     backgroundTextStyle: "light",
