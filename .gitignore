@@ -8,3 +8,5 @@ node_modules/
 *.local
 .trae/
 .tw-patch/
+.env.development
+.env.production
